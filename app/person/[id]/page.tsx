@@ -1,5 +1,5 @@
 
-import {GetPersonById} from "@/app/api/getPersonData/museumApi";
+import {GetPersonById} from "@/app/lib/museumApi";
 
 export default async function PersonDetail({params}: { params: { id: string } }) {
     

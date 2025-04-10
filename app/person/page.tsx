@@ -1,5 +1,5 @@
 
-import {GetPersonData} from "@/app/api/getPersonData/museumApi";
+import {GetPersonData} from "@/app/lib/museumApi";
 import Button from '@mui/material/Button';
 import Link from 'next/link';
 export default async function PersonList() {
