@@ -1,12 +1,15 @@
 
 import {GetPersonById} from "@/app/lib/museumApi";
-
-export default async function PersonDetail({params}: { params: { id: string } }) {
+type Props = {
+    params: { id: string }
+    searchParams: { [key: string]: string | string[] | undefined }
+  }
+export default async function PersonDetail({params}: Props) {
     
 
     const getParams = await params;
     const data = await GetPersonById(Number(getParams.id));
-    //https://stackoverflow.com/questions/77412027/using-next-13-5-6-app-router-how-to-get-params-of-dynamic-route
+    //https://github.com/vercel/next.js/discussions/46131
     return (
         <div>
             <h1>Person</h1>
